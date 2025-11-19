@@ -35,8 +35,8 @@ bash start_testing.sh
 If you find our work useful in your research, please consider citing:
 ```bibtex
 @article{wu2025towards,
-  title={Towards Multi-Dimensional Assessment of AI-Generated Images: A Multi-Granularity Text-Image Alignment Approach},
-  author={Wu, Yi and Luo, Hang},
+  title={MGA: Multi-Granularity Alignment for AI Generated Image Quality Assessment},
+  author={Wu, Yi and Luo, Hang, and Liang, Jinxing},
   journal={IEEE Signal Processing Letters},
   year={2025},
   publisher={IEEE}
