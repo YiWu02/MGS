@@ -35,7 +35,7 @@ bash start_testing.sh
 If you find our work useful in your research, please consider citing:
 ```bibtex
 @article{wu2025towards,
-  title={MGA: Multi-Granularity Alignment for AI Generated Image Quality Assessment},
+  title={MGS: Multi-Granularity Similarity for AI Generated Image Quality Assessment},
   author={Wu, Yi and Luo, Hang, and Liang, Jinxing},
   journal={IEEE Signal Processing Letters},
   year={2025},
