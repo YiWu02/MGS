@@ -1,4 +1,4 @@
-# MGA: Multi-Granularity Alignment for AI Generated Image Quality Assessment
+# MGS: Multi-Granularity Similarity for AI Generated Image Quality Assessment
 
 ## Overview
 This paper proposes a multi-dimensional AGIQA method based on joint text templates and multi-granularity text-image correspondence.The proposed method leverages the pre-trained CLIP model to collaboratively assess the quality of AGIs: it constructs joint text descriptions that encompass both visual quality and authenticity to facilitate their co-evaluation; additionally, it segments the original prompt into multiple fragments and computes the similarity between the image and both the complete prompt and its individual fragments, thereby achieving a multi-granularity assessment of text-image correspondence. 
