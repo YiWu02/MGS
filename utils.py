@@ -7,7 +7,6 @@ from torch.utils.data import DataLoader
 import logging
 from dataloader import AGIQADataset_1k, AGIQADataset_3k, AGIQADataset_2023
 from torchvision.transforms import Compose, ToTensor, Normalize, RandomHorizontalFlip, Resize
-import re
 
 try:
     from torchvision.transforms import InterpolationMode
@@ -56,7 +55,7 @@ def split_2023(prompt):
     cleaned_tokens = []
     for token in tokens:
         if token and token.strip():
-            # 去除前后空白、逗号、句号（可根据需要添加更多标点）
+            # 去除前后空白、逗号、句号
             cleaned = re.sub(r'^[\s,."]+|[\s,."]+$', '', token)
             if cleaned:
                 cleaned_tokens.append(cleaned)
