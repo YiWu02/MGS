@@ -33,22 +33,16 @@ def split_3k(prompt):
     """
     split_pattern = (
         r'(?=(?:\b(?:in|of|on|at|from|by|with|for|across|inside|near|between|as|to)\b|,|:))'
-        # r'(?=(?:\b(?:in|of|on|at|from|by|with|for|across|inside|near|between|as|to)\b))'
-        # r'(?=(?:,|:))'
     )
-    # 分割文本
     tokens = re.split(split_pattern, prompt, flags=re.IGNORECASE)
-    # 清理每个token，去除前后空格和标点符号
     cleaned_tokens = []
     for token in tokens:
-        if token and token.strip():
-            # 去除前后标点符号和空格
-            cleaned = re.sub(r'^[\s,:]+|[\s,:]+$', '', token.strip())
-            cleaned = token.strip()
-            if cleaned:
-                cleaned_tokens.append(cleaned)
+        # 去除开头和结尾的空白、逗号、冒号
+        cleaned = re.sub(r'^[\s,:]+|[\s,:]+$', '', token)
+        if cleaned:
+            cleaned_tokens.append(cleaned)
     return cleaned_tokens
-    
+
 
 def split_2023(prompt):
     """
@@ -57,18 +51,13 @@ def split_2023(prompt):
     """
     split_pattern = (
         r'(?=(?:\b(?:in|of|on|at|from|with|for|across|through|against|over|above|behind|next to|under|into|onto|without)\b|,|\.))'
-        # r'(?=(?:\b(?:in|of|on|at|from|with|for|across|through|against|over|above|behind|next to|under|into|onto|without)\b))'
-        # r'(?=(?:,|\.))'
     )
-    # 分割文本
     tokens = re.split(split_pattern, prompt, flags=re.IGNORECASE)
-    # 清理每个token，去除前后空格和标点符号
     cleaned_tokens = []
     for token in tokens:
         if token and token.strip():
-            # 去除前后标点符号和空格
-            cleaned = re.sub(r'^[\s,.]+|[\s,.]+$', '', token.strip())
-            cleaned = token.strip()
+            # 去除前后空白、逗号、句号（可根据需要添加更多标点）
+            cleaned = re.sub(r'^[\s,."]+|[\s,."]+$', '', token)
             if cleaned:
                 cleaned_tokens.append(cleaned)
     return cleaned_tokens
