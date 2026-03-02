@@ -1,4 +1,4 @@
-# Multi-Dimensional AI-Generated Image Quality Assessment viaJoint Text Template and Multi-Granularity Similarity
+# Multi-Dimensional AI-Generated Image Quality Assessment via Joint Text Template and Multi-Granularity Similarity
 
 ## Overview
 We propose a multi-dimensional evaluation framework that enables the co-evaluation of quality and authenticity, as well as multi-granularity image–text correspondence assessment. Specifically, joint text template is constructed to co-evaluate image quality and authenticity. By dividing the image into patches and segmenting prompt into fragments, our method performs a multi-granularity correspondence analysis through similarity computation, and finally predicts three-dimensional scores.  
@@ -35,11 +35,12 @@ bash start_testing.sh
 If you find our work useful in your research, please consider citing:
 ```bibtex
 @article{WU2026,
-title = {Multi-Dimensional AI-Generated Image Quality Assessment viaJoint Text Template and Multi-Granularity Similarity},
+title = {Multi-Dimensional AI-Generated Image Quality Assessment via Joint Text Template and Multi-Granularity Similarity},
 journal = {Pattern Recognition Letters},
-year = {2026}
+year = {2026},
 author = {Yi Wu and Hang Luo and Jinxing Liang}
-}```
+}
+```
 
 
 ## License
