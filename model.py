@@ -162,7 +162,6 @@ class AGIQAModel(nn.Module):
                 fine_grained_score = (weights * segment_scores).sum()
 
                 # 融合全局和细粒度相似度
-                # final_score = 0.7 * global_sim + 0.3 * fine_grained_score
                 alpha = torch.sigmoid(self.alpha)
                 final_score = alpha * global_sim + (1 - alpha) * fine_grained_score
                 score = (final_score * 5).squeeze()
